@@ -1,0 +1,4 @@
+.list {
+    @extend %listreset;
+    @import 'list-features';
+}

@@ -1,0 +1,28 @@
+.btn {
+  @include animate (background border-color);
+  @include v-align;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: map-get($btn, fontWeight);
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1rem 2.5rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+
+  &--primary {
+    background: map-deep-get($btn, primary, background);
+    color: map-deep-get($btn, primary, color);
+    border: 0.1rem solid map-deep-get($btn, primary, border);
+
+    &.active,
+    &:hover {
+      background: map-deep-get($btn, primary, activeBg);
+      border: 0.1rem solid map-deep-get($btn, primary, activeBorder);
+    }
+  }
+
+  &--block {
+    display: block;
+  }
+}

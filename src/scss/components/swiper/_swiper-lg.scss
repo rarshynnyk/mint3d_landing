@@ -1,0 +1,15 @@
+&-lg {
+  width: 100%;
+  height: 100%;
+
+  .lazy {
+    @include fullContain(absolute);
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

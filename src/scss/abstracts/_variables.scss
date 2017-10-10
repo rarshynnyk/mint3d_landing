@@ -1,0 +1,106 @@
+// Global variables
+//
+// Base font styles for headings and links.
+
+$colors: (
+  gray: #eaeced,
+  gray100: darken(#eaeced, 10%),
+  gray200: #666,
+  gray300: #333,
+  white: #fff,
+  black: #000,
+  primary: #990000
+);
+
+// For headers
+$headings: (
+  'sizes': (
+    h1: (
+      fontSize: 3rem,
+
+      tablet: (
+        fontSize: 4rem
+      )
+    ),
+    h2: (
+      fontSize: 2.8rem,
+
+      tablet: (
+        fontSize: 3.2rem
+      )
+    ),
+    h3: (
+      fontSize: 2.5rem,
+
+      tablet: (
+        fontSize: 2.2rem
+      )
+    ),
+    h6: (
+      fontSize: 1.8rem,
+
+      tablet: (
+        fontSize: 2rem
+      )
+    ),
+    'h1-font-size': 4rem,
+    'h2-font-size': 27px,
+    'h3-font-size': 24px,
+    'h4-font-size': 21px,
+    'h5-font-size': 17px,
+    'h6-font-size': 2rem
+  ),
+  'fonts': (
+    'headings-font-family': inherit,
+    'headings-color': inherit
+  )
+);
+
+// Global vars for body typography
+$base: (
+  'base-font-sans-serif': unquote("'Roboto', sans-serif"),
+  'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
+  'base-text-color': #000,
+  'base-background-color': map-get($colors, gray),
+  'base-link-color':#39f,
+  'base-font-size': 1.4rem,
+  'base-line-height': 1.2,
+  'base-font-family': unquote("'Roboto', sans-serif"),
+  'vertical-rhythm': '(map-get($base, base-line-height) * 1em)',
+  'base-min-width': 320px,
+  'overlay-bg': rgba(map-get($colors, gray), 0.8),
+  'secondary-bg': rgba(map-get($colors, gray100), 0.7)
+);
+
+// Vars for forms
+$forms: (
+  'form-element-padding': unquote("0.4em 0.7em"),
+  'form-element-border-color': #999,
+  'form-element-focus-border-color': #000,
+  'placeholder-color': #999
+);
+
+// Breakpoints for include media mixin
+$breakpoints: (
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 980px,
+  'widescreen': 1200px
+);
+
+// Keywords for include media mixin
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+$header: (
+  height: 5rem,
+  desktopHeight: 8rem,
+  background: map-get($colors, white)
+);

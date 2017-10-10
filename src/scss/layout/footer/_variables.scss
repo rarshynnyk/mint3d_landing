@@ -1,0 +1,8 @@
+$footer :(
+  top: (
+    background: map-get($colors, gray200)
+  ),
+  bottom: (
+    background: map-get($colors, gray300)
+  )
+)

@@ -1,0 +1,95 @@
+// Typography
+//
+// Base font styles for headings and links.
+
+h1, .h1 {
+  font-size: map-deep-get($headings, sizes, h1, fontSize);
+  font-weight: 500;
+  margin: 0 0 0.5em;
+
+  @include media ('>=tablet') {
+    font-size: map-deep-get($headings, sizes, h1, tablet, fontSize);
+  }
+}
+
+h2, .h2 {
+  font-size: map-deep-get($headings, sizes, h2, fontSize);
+  font-weight: 500;
+  margin: 0 0 0.5em;
+
+  @include media ('>=tablet') {
+    font-size: map-deep-get($headings, sizes, h2, tablet, fontSize);
+  }
+}
+
+h3, .h3 {
+  font-size: map-deep-get($headings, sizes, h3, fontSize);
+  font-weight: 500;
+  margin: 0 0 0.5em;
+
+  @include media ('>=tablet') {
+    font-size: map-deep-get($headings, sizes, h3, tablet, fontSize);
+  }
+}
+
+h6, .h6 {
+  font-size: map-deep-get($headings, sizes, h6, fontSize);
+  font-weight: 500;
+  margin: 0 0 0.5em;
+
+  @include media ('>=tablet') {
+    font-size: map-deep-get($headings, sizes, h6, tablet, fontSize);
+  }
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: map-get($base, 'base-link-color');
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.text--primary {
+  color: map-get($colors, primary);
+}
+
+.text--light {
+  color: map-get($colors, white);
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--light {
+  font-weight: 300;
+}
+
+.text-xl--right {
+  @include media ('>=desktop') {
+    text-align: right;
+  }
+}
+
+////
+// Nested list cycle for text sizes;
+////
+$sizes: ( xs: 1rem, sm: 1.1rem, lg: 1.6rem, xl: 1.8rem);
+@each $child, $size in $sizes {
+  .text--#{$child} {
+    font-size: $size;
+  }
+}

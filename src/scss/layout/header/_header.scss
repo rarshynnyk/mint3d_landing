@@ -1,0 +1,64 @@
+.header {
+  @include animate (all);
+  position: fixed;
+  display: flex;
+  height: map-get($header, height);
+  top: 0;
+  left: 0;
+  right: 0;
+  background: map-get($header, background);
+  padding: 0 1.5rem;
+  box-shadow: 0 0 1rem rgba(map-get($colors, black), 0.1);
+  z-index: 10;
+
+  @include media ('>=desktop') {
+    height: map-get($header, desktopHeight);
+  }
+
+  &.affix {
+    @include media ('>=tablet') {
+      height: 6rem;
+    }
+  }
+
+  // &--sticky {
+  //   @include media ('>=desktop') {
+  //     min-height: map-get($header, desktopHeight);
+  //   }
+  // }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__logo {
+    @include animate (width);
+    display: inline-block;
+    width: 4rem;
+    margin-right: 1.5rem;
+
+    @include media ('>=desktop') {
+      width: 8rem;
+    }
+
+    .header.affix & {
+      @include media ('>=desktop') {
+        width: 5rem;
+      }
+    }
+  }
+
+  &__toggle {
+    margin-left: auto;
+
+    .bar {
+      display: block;
+      width: 2.5rem;
+      height: 0.2rem;
+      background: map-get($colors, primary);
+      margin: 0.6rem 0;
+    }
+  }
+}

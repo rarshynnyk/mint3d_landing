@@ -1,0 +1,11 @@
+$btn: (
+  fontWeight: 600,
+
+  primary: (
+    background: map-get($colors, primary),
+    activeBg: lighten(map-get($colors, primary), 10%),
+    border: map-get($colors, primary),
+    activeBorder: lighten(map-get($colors, primary), 10%),
+    color: map-get($colors, white),
+  )
+);

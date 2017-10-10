@@ -1,0 +1,46 @@
+.navbar {
+  @extend %listreset;
+
+  &--right {
+    margin-left: auto;
+
+    > li {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  > li {
+    position: relative;
+    display: inline-block;
+    margin-right: 1rem;
+
+    &:hover,
+    &.active {
+      &:after {
+        transform: scale(1);
+      }
+    }
+
+    &:after {
+      @include animate (transform);
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0.2rem;
+      background: map-get($colors, primary);
+      transform: scale(0);
+    }
+
+    > a:not(.btn) {
+      display: inline-block;
+      color: map-get($navbar, color);
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0.4rem 0;
+    }
+  }
+}
