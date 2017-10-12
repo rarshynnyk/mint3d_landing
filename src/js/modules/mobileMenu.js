@@ -1,6 +1,7 @@
 const mobileMenu = function($) {
   const $mobileMenuSelector = $('.mobile-menu'),
-        $mobileMenuLink = $mobileMenuSelector.find('a');
+        $mobileMenuLink = $mobileMenuSelector.find('a'),
+        $mobileToggle = $mobileMenuSelector.find('.close');
 
   function init () {
 

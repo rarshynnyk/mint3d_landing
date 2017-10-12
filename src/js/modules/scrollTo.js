@@ -2,7 +2,7 @@ import scrollTo from 'jquery.scrollTo';
 
 const scrollToModule = function($) {
   function init () {
-    $('a[href^="#"]').on('click', function() {
+    $('a[href^="#"]:not(.close, [data-toggle="collapse"])').on('click', function() {
       let target = $($(this).attr('href')),
         duration = 800;
 
