@@ -1,0 +1,9 @@
+&-slide {
+  .swiper-specifications & {
+    padding-bottom: 5rem;
+
+    @include media ('>=tablet') {
+      padding-bottom: 0;
+    }
+  }
+}

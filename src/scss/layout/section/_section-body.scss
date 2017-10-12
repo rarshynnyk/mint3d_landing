@@ -25,13 +25,13 @@
 
   .section--md & {
     @include media ('>=desktop') {
-      height: 80rem;
+      min-height: 80rem;
     }
   }
 
   .section--lg & {
     @include media ('>=desktop') {
-      height: 100rem;
+      min-height: 100rem;
     }
   }
 

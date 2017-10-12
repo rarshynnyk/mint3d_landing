@@ -27,6 +27,7 @@
 
   .list {
     text-align: center;
+    font-weight: 500;
 
     @include media ('>=desktop') {
       text-align: left;
@@ -34,10 +35,17 @@
 
 
     > li {
+      position: relative;
       margin: 0 0 1rem;
 
       &:last-child {
         margin: 0;
+      }
+
+      &:hover {
+        > a {
+          text-decoration: underline;
+        }
       }
 
       > a {

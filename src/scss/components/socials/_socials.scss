@@ -1,6 +1,7 @@
 .socials {
   @extend %listreset;
   display: inline-block;
+  font-weight: 500;
 
   &__item {
     margin: 0 0 1rem;
@@ -9,7 +10,14 @@
       margin-bottom: 0;
     }
 
+    &:hover {
+      .socials__content {
+        text-decoration: underline;
+      }
+    }
+
     > a {
+      @include animate (color);
       display: flex;
       align-items: center;
       color: inherit;
@@ -18,20 +26,10 @@
   }
 
   &__icon {
+    @include animate (color);
     display: block;
     width: 2rem;
     margin-right: 1.5rem;
-  }
-
-  .icon-telegram {
-    color: #0088cc;
-  }
-
-  .icon-instagram {
-    color: #c13584;
-  }
-
-  .icon-skype {
-    color: #00aff0;
+    color: map-get($colors, white);
   }
 }

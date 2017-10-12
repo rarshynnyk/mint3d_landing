@@ -25,4 +25,35 @@
   &--block {
     display: block;
   }
+
+  &--chat {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+
+    &.affix-top {
+      @include animate (all);
+      transform: translateY(100%);
+    }
+
+    &.affix-bottom {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &.affix {
+      @include animate (all);
+      transform: translateY(0);
+    }
+
+    @include media ('>=tablet') {
+      left: auto;
+      right: 2.5rem;
+      bottom: 2.5rem;
+      border-radius: 0.3rem;
+    }
+  }
 }

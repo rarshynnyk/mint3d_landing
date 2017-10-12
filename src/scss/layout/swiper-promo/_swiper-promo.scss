@@ -1,6 +1,12 @@
 .swiper-promo {
   .swiper-slide {
     min-height: 37rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media ('>=desktop') {
+      min-height: 80rem;
+    }
   }
 
   &__navigation {
