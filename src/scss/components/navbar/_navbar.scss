@@ -16,8 +16,12 @@
     display: inline-block;
     margin-right: 1rem;
 
-    &:hover,
-    &.active {
+    &.active,
+    &:hover {
+      > a:not(.btn) {
+        color: map-get($colors, primary);
+      }
+
       &:after {
         transform: scale(1);
       }
@@ -36,11 +40,16 @@
     }
 
     > a:not(.btn) {
+      @include animate (color);
       display: inline-block;
       color: map-get($navbar, color);
       text-decoration: none;
       text-transform: uppercase;
       padding: 0.4rem 0;
+
+      &:hover {
+        color: map-get($colors, primary);
+      }
     }
   }
 }

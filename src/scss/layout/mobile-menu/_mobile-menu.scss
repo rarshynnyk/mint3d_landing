@@ -29,6 +29,11 @@
         display: none;
       }
 
+      .lang {
+        display: inline-block;
+        padding: 2rem 0 0;
+      }
+
       > a {
         &:active,
         &:focus {
