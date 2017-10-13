@@ -12,6 +12,11 @@ const scrollToModule = function($) {
         }
       });
     });
+
+    $('.navbar li a').on('click', function(){
+      $('.navbar li').removeClass('active');
+      $(this).parent('li').addClass('active');
+    });
   }
 
   return {
