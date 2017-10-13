@@ -29,9 +29,9 @@ var sliderLarge = function($) {
       $(this).parent().addClass('active');
     });
 
-    if (!is_mobile) {
-      const ps = initScrollBar();
-    }
+    // if (!is_mobile) {
+    //   const ps = initScrollBar();
+    // }
   }
 
   function initScrollBar() {
