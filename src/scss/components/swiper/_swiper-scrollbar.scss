@@ -1,7 +1,0 @@
-&__scrollbar {
-  @include media ('>=desktop') {
-    position: relative;
-    height: 58rem;
-    padding-right: 1rem;
-  }
-}
